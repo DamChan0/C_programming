@@ -1,22 +1,18 @@
 #include <stdio.h>
-typedef struct tests
+typedef struct vueron
 {
     /* data */
-    int q[10];
+    int people;
+    char people_name[100];
+}vueron_t;
+
+typedef struct tests
+{
+    vueron_t vueronPeople;
+    /* data */
+    int num;
 }tests_t;
 
-
-typedef union  test{
-    int n;
-    double a;
-};
-
 void main(){
-    union test t;
-    t.n = 10;
-    printf("%d\n",t.n);
-
-    t.a = 10.0;
-    printf("n = %d\n",t.n);
-    printf("a = %f\n",t.a);
+    
 }

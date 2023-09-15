@@ -2,19 +2,21 @@
 
 typedef union
 {
-  unsigned char a;
-  unsigned char b;
-   double c;
-  int d;
+  unsigned int  a;
+  
+   struct vueron {
+    unsigned int a : 3;
+    unsigned int b : 3;
+    unsigned int c : 2;
+    unsigned int d : 5;
+    unsigned int e : 3;
+
+
+  }vueron_t;
 }SHAREDATA;
 
 int main(void)
 {
  SHAREDATA var;
- var.d=0x87654321;
-
- printf("¾È³ç%x\n",var.a);
- printf("%x\n",var.b);
- printf("%x\n",var.c);
- return 0;
+ 
 }
