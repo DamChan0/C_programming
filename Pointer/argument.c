@@ -17,11 +17,11 @@ int main(void)
 
     int reference_var = 10;
 
-    printf("변수 var의 초깃값은 %d입니다.\n", reference_var);
+    printf("변수 reference_var 초깃값은 %d입니다.\n", reference_var);
 
     reference_local(&reference_var);
 
-    printf("local() 함수 호출 후 변수 var의 값은 %d입니다.\n", reference_var);
+    printf("reference_local() 함수 호출 후 변수 reference_var 값은 %d입니다.\n", reference_var);
 
 
 
