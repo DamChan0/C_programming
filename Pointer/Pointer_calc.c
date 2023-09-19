@@ -1,23 +1,27 @@
 #include <stdio.h>
 
+int a[1000] = {0};
+char b[1000] = {0};
+
 int main(void)
 {
-	char* ptr_char = 0;
-	int* ptr_int = NULL;
-	double* ptr_double = 0x00;
-	
-	printf("í¬ì¸í„°   ptr_charê°€ í˜„ì¬ ê°€ë¦¬í‚¤ê³  ìˆëŠ” ì£¼ì†Œê°’ì€ %#xì…ë‹ˆë‹¤.\n", ptr_char);
-	printf("í¬ì¸í„°    ptr_intê°€ í˜„ì¬ ê°€ë¦¬í‚¤ê³  ìˆëŠ” ì£¼ì†Œê°’ì€ %#xì…ë‹ˆë‹¤.\n", ptr_int);
-	printf("í¬ì¸í„° ptr_doubleì´ í˜„ì¬ ê°€ë¦¬í‚¤ê³  ìˆëŠ” ì£¼ì†Œê°’ì€ %#xì…ë‹ˆë‹¤.\n", ptr_double);
-	
-	printf("í¬ì¸í„°   ptr_charê°€ 1 ì¦ê°€ í›„ì— ê°€ë¦¬í‚¤ê³  ìˆëŠ” ì£¼ì†Œê°’ì€ %#xì…ë‹ˆë‹¤.\n", ++ptr_char);
-	// printf("í¬ì¸í„°    ptr_intê°€ 1 ì¦ê°€ í›„ì— ê°€ë¦¬í‚¤ê³  ìˆëŠ” ì£¼ì†Œê°’ì€ %#xì…ë‹ˆë‹¤.\n", ++ptr_int);
-	// printf("í¬ì¸í„° ptr_doubleì´ 1 ì¦ê°€ í›„ì— ê°€ë¦¬í‚¤ê³  ìˆëŠ” ì£¼ì†Œê°’ì€ %#xì…ë‹ˆë‹¤.\n", ++ptr_double);
-    int ptr_int2 = ptr_int +1 ;
-    int ptr_double2 = ptr_double +1 ;
-	printf("í¬ì¸í„° ptr_doubleì´ 1 ì¦ê°€ í›„ì— ê°€ë¦¬í‚¤ê³  ìˆëŠ” ì£¼ì†Œê°’ì€ %#xì…ë‹ˆë‹¤.\n",  ptr_double2 -ptr_int2 );
-	
-	
+	char *ptr_char = 0;
+	int *ptr_int = NULL;
+	double *ptr_double = 0x00;
+
+	printf("Æ÷ÀÎÅÍ   ptr_char°¡ ÇöÀç °¡¸®Å°°í ÀÖ´Â ÁÖ¼Ò°ªÀº %#xÀÔ´Ï´Ù.\n", ptr_char);
+	printf("Æ÷ÀÎÅÍ    ptr_int°¡ ÇöÀç °¡¸®Å°°í ÀÖ´Â ÁÖ¼Ò°ªÀº %#xÀÔ´Ï´Ù.\n", ptr_int);
+	printf("Æ÷ÀÎÅÍ ptr_doubleÀÌ ÇöÀç °¡¸®Å°°í ÀÖ´Â ÁÖ¼Ò°ªÀº %#xÀÔ´Ï´Ù.\n", ptr_double);
+
+	printf("Æ÷ÀÎÅÍ   ptr_char°¡ 1 Áõ°¡ ÈÄ¿¡ °¡¸®Å°°í ÀÖ´Â ÁÖ¼Ò°ªÀº %#xÀÔ´Ï´Ù.\n", ++ptr_char);
+	// printf("Æ÷ÀÎÅÍ    ptr_int°¡ 1 Áõ°¡ ÈÄ¿¡ °¡¸®Å°°í ÀÖ´Â ÁÖ¼Ò°ªÀº %#xÀÔ´Ï´Ù.\n", ++ptr_int);
+	// printf("Æ÷ÀÎÅÍ ptr_doubleÀÌ 1 Áõ°¡ ÈÄ¿¡ °¡¸®Å°°í ÀÖ´Â ÁÖ¼Ò°ªÀº %#xÀÔ´Ï´Ù.\n", ++ptr_double);
+	int ptr_int2 = ptr_int + 1;
+	int ptr_double2 = ptr_double + 1;
+	printf("¹è¿­ a+1ÀÇ ÁÖ¼Ò °ªÀº %#xÀÔ´Ï´Ù.\n", (a + 1));
+	printf("¹è¿­ a+2ÀÇ ÁÖ¼Ò °ªÀº %#xÀÔ´Ï´Ù.\n", (a + 2));			// aÀÇ Å¸ÀÔÀÎ int Å©±â¸¸Å­ Áõ°¡ 
+	printf("¹è¿­ b+1ÀÇ ÁÖ¼Ò °ªÀº %#xÀÔ´Ï´Ù.\n", (b + 1));		
+	printf("¹è¿­ b+2ÀÇ ÁÖ¼Ò °ªÀº %#xÀÔ´Ï´Ù.\n", (b + 2));			// bÀÇ Å¸ÀÔÀÎ char Å©±â¸¸Å­ Áõ°¡ 
+
 	return 0;
 }
-
