@@ -20,7 +20,7 @@ typedef struct tests1
     char a;
 
 } tests_t1;
-#pragma pack(pop)
+#pragma pack(pop)              
 
 typedef struct vueron2
 {
