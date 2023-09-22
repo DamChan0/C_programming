@@ -20,19 +20,22 @@ double Div(double num1, double num2)
     return num1 / num2;
 }
 
-double Calculator(double num1, double num2, double (*func)(double, double))
+double Calculator(double num1, double num2, double (*func)(double a, double b))
 {
     return func(num1, num2);
 }
 
 int main(void)
 {
-    double (*calc)(double, double) = NULL; // í•¨ìˆ˜ í¬ì¸í„° ì„ ì–¸
+    double (*calc)(double, double) = NULL; // ÇÔ¼ö Æ÷ÀÎÅÍ ¼±¾ğ
     double num1 = 3, num2 = 4, result = 0;
-    char oper = '+';
+    char oper = '/';
+    printf(" num1, ¿¬»êÀÚ ,num2¸¦ ÀÔ·ÂÇÏ¼¼¿ä. (¿¬»êÀÚ = +, - , * , /  Áß °¡´ÉÇÕ´Ï´Ù)  \n");
+    scanf("%lf %c %lf", &num1, &oper, &num2);
 
     switch (oper)
     {\
+
     case '+':
         calc = Add;
         break;
@@ -46,12 +49,11 @@ int main(void)
         calc = Div;
         break;
     default:
-        printf("ì‚¬ì¹™ì—°ì‚°(+, -, *, /)ë§Œì„ ì§€ì›í•©ë‹ˆë‹¤.");
+        printf("»çÄ¢¿¬»ê(+, -, *, /)¸¸À» Áö¿øÇÕ´Ï´Ù.");
         break;
     }
 
-    result = Calculator(
-         num1, num2, calc);
+    result = Calculator( num1, num2, calc);
     printf("result = %f\n", result);
 
     return 0;

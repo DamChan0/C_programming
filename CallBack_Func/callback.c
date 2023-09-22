@@ -1,32 +1,29 @@
 #include <stdio.h>
 
-// callback function type
+typedef void (*user_print)(void);  // callback function 원형
 
-typedef void (*user_print)(void);
 
-// setter for a callback function
-void setPrintCallback(user_print);
+void setPrintCallback(user_print); // callback 함수 설정
 
-// user-defined function
-void userFunc(void);
 
-// use a callback function
-void useCallback(void);
+void userFunc(void); // callback 함수
 
-// global variable for a callback function
-user_print userCallbackFunc = NULL;
+
+void useCallback(void); // callback 함수 호출
+
+
+user_print userCallbackFunc = NULL; // callback 함수 선언 및 초기화
 
 int main(void)
 {
-    // Before setting the callback function
-    printf("Before setting the callback function\n");
+   
+    printf("callback function 설정 전\n");
     useCallback();
 
-    // Setting the callback function
-    setPrintCallback(userFunc);
 
-    // After setting the callback function
-    printf("After setting the callback function\n");
+    setPrintCallback(userFunc); // callback 함수 설정
+
+    printf("callback 함수가 설정되었습니다.\n");
     useCallback();
 
     return 0;
@@ -41,7 +38,8 @@ void setPrintCallback(user_print fp)
 // user function
 void userFunc(void)
 {
-    printf("I'm a callback function\n\n");
+    printf("콜백 함수를 실행합니다. \n");
+    printf("made by. 김동민 system team \n\n안녕히가세요\n");
 }
 
 // use callback function
@@ -53,6 +51,6 @@ void useCallback(void)
     }
     else
     {
-        printf("no callback function\n\n");
+        printf("callback function을 설정하세요\n\n");
     }
 }
