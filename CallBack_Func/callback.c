@@ -2,12 +2,9 @@
 
 typedef void (*user_print)(void);  // callback function 원형
 
-
 void setPrintCallback(user_print); // callback 함수 설정
 
-
 void userFunc(void); // callback 함수
-
 
 void useCallback(void); // callback 함수 호출
 
@@ -29,23 +26,23 @@ int main(void)
     return 0;
 }
 
-// setter for callback function
+//  callback 함수 설정 함수
 void setPrintCallback(user_print fp)
 {
     userCallbackFunc = fp;
 }
 
-// user function
+// 사용자 정의 함수
 void userFunc(void)
 {
     printf("콜백 함수를 실행합니다. \n");
     printf("made by. 김동민 system team \n\n안녕히가세요\n");
 }
 
-// use callback function
+// callback 함수 호출 함수
 void useCallback(void)
 {
-    if (userCallbackFunc) // check if a callback function has registered
+    if (userCallbackFunc) 
     {
         userCallbackFunc();
     }
