@@ -25,6 +25,7 @@ typedef struct DataParsing
 
 int main()
 {
+    
     int list[5] = {0};
    
     for( int i = 0 ; i<50 ; i= i+5)
