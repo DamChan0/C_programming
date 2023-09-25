@@ -18,9 +18,9 @@ double Mul(double num1, double num2)
 double Div(double num1, double num2)
 {
     return num1 / num2;
-}
+}1/
 
-double Calculator(double num1, double num2, double (*func)(double a, double b))
+double Calculator(double num1, double num2, double (*func)(double num1, double num2))
 {
     return func(num1, num2);
 }

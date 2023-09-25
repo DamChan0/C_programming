@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-typedef void (*user_print)(void);  // callback function 원형
+typedef int (*user_print)(void);  // callback function 원형
 
 void setPrintCallback(user_print); // callback 함수 설정
 

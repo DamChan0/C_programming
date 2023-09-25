@@ -9,7 +9,7 @@ void ProcessLine(char* buffer) {
 }
 
 // 파일 읽기 함수
-void ReadFile(const char* filename, FileCallback callback) {
+void ReadFile( const char *filename, FileCallback callback) {
     FILE* file = fopen(filename, "r");
     if (file == NULL) {
         printf("파일 열기 실패\n");
@@ -34,7 +34,8 @@ void ReadFile(const char* filename, FileCallback callback) {
 
 
 int main() {
-    const char* filename = "example.txt";
+    const char filename[20] = "example.txt";        // 문자열 선언
+    // const char filename* = "example.txt";        // 문자열의 주소 
     
     // 파일 읽기 함수에 사용자 정의 콜백 함수 등록
     ReadFile(filename, ProcessLine);
