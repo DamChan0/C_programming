@@ -6,8 +6,8 @@ int twoDimensional[4][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}, {10, 11, 12}};
 
 int main(void)
 {
-
-    int *pnt_array = array;
+    
+    double *pnt_array = array;
     printf("array[5] : ");
     for (int i = 0; i < 5; i++)
     {
@@ -19,8 +19,11 @@ int main(void)
     {
         printf(" %d ", array[i]);
     }
+
+    int a = sizeof(pnt_array);
+    int b = sizeof(array);
     printf("\n\n");
-    printf(" 주소으 포인터 값은 배열의 요소 값이다\n");
+    printf(" 배열의 포인터 값은 배열의 요소 값이다\n");
     if (*(array + 1) == array[1])
     {
         printf("*(array+1) == array[1] ,  *(array+1) : %d", *(array + 1));
@@ -46,5 +49,16 @@ int main(void)
     printf("twoDimensional[0][1] : %d\n", twoDimensional[0][1]);
     printf("twoDimensional[2][3] : %d\n", twoDimensional[2][3]);
 
-    return 0;
+
+ 
+    int num = 10;         	// 변수 선언
+
+void* ptr_num = &num;          // void 포인터 선언
+
+*(int*)ptr_num = 20;	// 명시적 타입 변환  후 포인터를 통한 메모리 접근 
+ 
+printf("ptr_num에저장된 값은 %d입니다.\n", *(int*)ptr_num); 
+printf("%d\n", ptr_num);  
+printf("%d\n", num); 
+   return 0;
 }
