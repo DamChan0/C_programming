@@ -4,8 +4,9 @@
 
 int integer = 10;
 char character = 'a';
-float float_number = 2;
-double double_number = 2;
+char character2 = 120;
+float float_number = 2.0f;
+double double_number = 2.000;
 
 typedef struct type
 {
@@ -39,19 +40,22 @@ unsigned char byteArray[4] = {0b10001100, 0b01000011, 0b11110110, 0b00100111};
 
 int main(void)
 {
-    int IID = integer / double_number;         // 묵시적 형변환
-    double DID = integer / double_number;      // 묵시적 형변환
-    double DFD = float_number / double_number; // 묵시적 형변환
-    int IFD = float_number / double_number;    // 묵시적 형변환
+ 
+    unsigned int ich = character2;
+    printf("%d\n",character2);   // 200 = 11001000  MSB 가 부호가 되어 
+    int IID = integer / double_number;         // 묵시적 형변환 산술연산
+    double DID = integer / double_number;      // 묵시적 형변환 산술연산
+    double DFD = float_number / double_number; // 묵시적 형변환 산술연산
+    int IFD = float_number / double_number;    // 묵시적 형변환 산술연산
 
-    double ID_casting = (double)integer / double_number;      // 명시적 형변환
+    double ID_casting = (double)integer / double_number;      // 명시적 형변환 
     double FD_casting = (double)float_number / double_number; // 명시적 형변환
     int IID_casting = (double)integer / double_number;      // 명시적 형변환   -> 묵시적 형변환
     int IFD_casting = (double)float_number / double_number; // 명시적 형변환  -> 묵시적 형변환
 
     char num13 = 'a';
     int num11 = (int)(num13);
-    printf(" int -> double\n");
+    printf("int -> double\n");
     printf("int integer/double_number 결과 값 %d\n", IID);
     printf("doulbe 명시적 형변환 후 double (double)integer / double_number 결과 값 %f\n", ID_casting);
     printf("double 묵시적 형변환 integer/double_number 결과 값 %f\n\n\n", DID);
